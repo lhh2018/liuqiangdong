@@ -1,0 +1,90 @@
+.slide-image {
+  margin-top: 5px;
+  width: 100%;
+  height: 100%;
+}
+
+.item-f {
+  margin: 5px 0 5px 5px;
+  font-family: "Times New Roman", Georgia, Serif;
+}
+
+.item-f .title {
+  font-size: 20px;
+}
+.item-f .item-v{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row
+}
+.item-f .item-v .price {
+  color: red;
+  flex: 1;
+}
+.item-f .item-v .score {
+  flex: 1;
+  font-size: 15px;
+  text-align: right
+}
+.item-f .item-v .sold {
+  flex: 1;
+  font-size: 15px;
+  text-align: right
+}
+
+.line {
+  width: 100%;
+  height: 8px;
+  background-color: rgb(224, 221, 221);
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer .left {
+  width: 30%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer .left .img {
+  width: 70%;
+}
+
+.footer .left .img image {
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+}
+
+.footer .left .number {
+  width: 20%;
+}
+
+.footer .left .number-v .number {
+  width: 25px;
+  height: 25px;
+  color: white;
+  background-color: red;
+  border-radius: 50%;
+  font-size: 10px;
+  text-align: center;
+  line-height: 25px;
+}
+
+.footer .right {
+  width: 70%;
+  text-align: center;
+  background-color: rgb(44, 240, 44);
+}
+
+.footer .right label {
+  line-height: 50px;
+  color: white;
+}

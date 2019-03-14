@@ -1,0 +1,36 @@
+<view>
+  <swiper style='height:250px;' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgs}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class='item-f'>
+  <label class='title'>{{title}}</label>
+  <view class='item-v'>
+    <label class='price'>¥{{price}}</label>
+    <label class='score'>好评率：97%</label>
+    <label class='sold'>已售101份</label>
+  </view>
+</view>
+<view class='line'></view>
+<view class='evidence'>
+  <image></image>
+  <image></image>
+  <image></image>
+</view>
+<view class='footer'>
+  <view class='left'>
+    <view class='img'>
+      <image src='../resource/images/putcart.png' bindtap='tocart'></image>
+    </view>
+    <view class='number-v' wx:if="{{number!=0}}">
+      <view class='number'>{{number}}</view>
+    </view>
+  </view>
+  <view class='right' bindtap='insert'>
+    <label>加入购物车</label>
+  </view>
+</view>

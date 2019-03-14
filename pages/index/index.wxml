@@ -1,0 +1,102 @@
+<scroll-view scroll-x class="swiper-tab">
+  <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">热卖</view>
+  <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">会员精选</view>
+  <view class="tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">今日特价</view>
+  <view class="tab-item {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">水果</view>
+  <view class="tab-item {{currentTab==4 ? 'on' : ''}}" data-current="4" bindtap="swichNav">蔬菜</view>
+  <view class="tab-item {{currentTab==5 ? 'on' : ''}}" data-current="5" bindtap="swichNav">肉类</view>
+  <view class="tab-item {{currentTab==6 ? 'on' : ''}}" data-current="6" bindtap="swichNav">水产</view>
+  <view class="tab-item {{currentTab==7 ? 'on' : ''}}" data-current="7" bindtap="swichNav">乳品</view>
+  <view class="tab-item {{currentTab==8 ? 'on' : ''}}" data-current="8" bindtap="swichNav">零食</view>
+  <view class="tab-item {{currentTab==9 ? 'on' : ''}}" data-current="9" bindtap="swichNav">酒饮</view>
+  <view class="tab-item {{currentTab==10 ? 'on' : ''}}" data-current="10" bindtap="swichNav">速食</view>
+  <view class="tab-item {{currentTab==11 ? 'on' : ''}}" data-current="11" bindtap="swichNav">粮油</view>
+  <view class="tab-item {{currentTab==12 ? 'on' : ''}}" data-current="12" bindtap="swichNav">日百</view>
+</scroll-view>
+
+<swiper current="{{currentTab}}" class="swiper" duration="300" style="height:{{winHeight - 30}}px">
+  <swiper-item scroll-y catchtouchmove="stopTouchMove">
+    <scroll-view scroll-y class='swiper-item'>
+      <view class='ad'>
+        <swiper style='height=120px;' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+          <block wx:for="{{imgUrls}}">
+            <swiper-item>
+              <image src="{{item.img}}" class="slide-image" data-item="{{item}}" bindtap='togoodInfo' />
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+      <view class='category'>
+        <block wx:for="{{category1}}">
+          <view class='item'>
+            <image src='{{item.img}}' class='image' data-id="{{item.id}}" bindtap='tocategory'></image>
+            <view class='font'>{{item.name}}</view>
+          </view>
+        </block>
+      </view>
+      <view class='category'>
+        <block wx:for="{{category2}}">
+          <view class='item'>
+            <image src='{{item.img}}' class='image' data-id="{{item.id}}" bindtap='tocategory'></image>
+            <view class='font'>{{item.name}}</view>
+          </view>
+        </block>
+      </view>
+      <view class='line'></view>
+      <view class='hot'>
+        <label class='title'>热门推荐</label>
+        <scroll-view scroll-x class='item-v'>
+          <block wx:for="{{hot_item}}">
+            <view class='item' data-item="{{item}}" bindtap='togoodInfo'>
+              <image class='item-image' src='{{item.img}}'></image>
+              <label class='name'>{{item.title}}</label>
+              <label class='price'>¥{{item.price}}</label>
+              <image class='cart' src="../resource/images/putcart.png"></image>
+            </view>
+          </block>
+        </scroll-view>
+      </view>
+      <view class='line'></view>
+      <view class=' explode'>
+        <label class='title'>爆款清单</label>
+        <view class='item-v'>
+          <block wx:for="{{explode_item}}">
+            <view class='item'>
+              <image class='item-image' src='{{item.img}}' data-item="{{item}}" bindtap='togoodInfo'></image>
+              <label class='name'>{{item.title}}</label>
+              <label class='price'>¥{{item.price}}</label>
+              <image class='cart' src="../resource/images/putcart.png" bindtap='showModal'></image>
+            </view>
+          </block>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item catchtouchmove="stopTouchMove">
+
+  </swiper-item>
+  <swiper-item catchtouchmove="stopTouchMove">
+
+  </swiper-item>
+  <swiper-item catchtouchmove="stopTouchMove">
+
+  </swiper-item>
+  <swiper-item catchtouchmove="stopTouchMove">
+
+  </swiper-item>
+  <swiper-item catchtouchmove="stopTouchMove">
+
+  </swiper-item>
+  <swiper-item>
+
+  </swiper-item>
+  <swiper-item catchtouchmove="stopTouchMove">
+
+  </swiper-item>
+  <swiper-item catchtouchmove="stopTouchMove">
+
+  </swiper-item>
+  <swiper-item catchtouchmove="stopTouchMove">
+
+  </swiper-item>
+</swiper>
