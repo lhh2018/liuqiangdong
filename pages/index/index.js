@@ -1,11 +1,11 @@
-const myaudio = wx.createInnerAudioContext();
+
 const app = getApp();
 Page({
   /**
    * 页面的初始数据
    */
   data: {
-	  animationData: {},
+
     winWidth: 0,
     winHeight: 0,
     currentTab: 0,
