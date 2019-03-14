@@ -34,19 +34,12 @@ Page({
   // 4 搜索回调函数  
   mySearchFunction: function (value) {
 
-    var name = value;
-    wx.navigateTo({
-      url: '../goodlist/goodlist?name=' + name
-    })
+   
   },
 
   // 5 返回回调函数
   myGobackFunction: function () {
-    // do your job here
-    // 示例：返回
-    wx.redirectTo({
-      url: '../index/index'
-    })
+   
   }
 
 
